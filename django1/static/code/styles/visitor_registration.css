@@ -1,0 +1,42 @@
+#heading{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.display-4{
+    font-weight: 300;
+    font-size: 40px;
+}
+.col-7{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+#referer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#visitorimage{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#visitorfingerprint{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+}
+
+.small-img-thumb {
+    width: 150px !important;
+    max-width: 150px !important;
+    height: 150px !important;
+    max-height: 150px !important;
+    margin: 20px !important;
+    padding: 20px !important;
+    border-radius: 20px !important;
+    border: 2px solid #111 !important;
+    outline: 0 !important;
+}

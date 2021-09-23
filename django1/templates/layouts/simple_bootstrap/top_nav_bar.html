@@ -1,0 +1,45 @@
+{% extends "layouts/simple_bootstrap/base.html" %}
+
+{% block html_content %}
+
+    <nav class="navbar navbar-expand navbar-light bg-light theme">
+        <a href="/reports">
+            <b>
+            <i class="fas fa-cogs gold" ></i> &nbsp;
+            A.J.M.S
+        </b>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-2">
+                    <a href="/visitor/registration" class="nav-link icon-theme" title="Visitor Registration" >
+                        <i class="fas fa-users gold"></i> &nbsp;
+                    </a>
+                </li>
+                <li class="nav-item mr-2">
+                    <a href="/visitor/attendance" class="nav-link icon-theme" title="Visitor Attendance" >
+                        <i class="fas fa-table gold"></i> &nbsp;
+                    </a>
+                </li>
+                 <li class="nav-item mr-2">
+                    <a href="/referer/registration" class="nav-link icon-theme" title="Referer Registration" >
+                        <i class="fas fa-user gold"></i> &nbsp;
+                    </a>
+                </li>
+                 <li class="nav-item mr-2">
+                    <a href="/reports" class="nav-link icon-theme" title="Referer Registration" >
+                        <i class="fas fa-chart-bar gold"></i> &nbsp;
+                    </a>
+                </li>
+                 <li class="nav-item mr-2" style="margin-left:30px;" >
+                    <a href="" class="nav-link icon-theme" title="User Logout" >
+                        <i class="fas fa-sign-out red"></i> &nbsp;
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block html_content_page_body %} {% endblock %}
+
+{% endblock %}

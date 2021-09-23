@@ -1,0 +1,294 @@
+{% extends "layouts/simple_bootstrap/top_nav_bar.html" %}
+
+{% block html_content_page_body %}
+
+    <form class="container" action="" method="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+         <div id="heading" class="text-center" style="padding:10px;" >
+            <h2>Visitor Registration</h2>
+            <hr>
+        </div>
+
+        <div class="row">
+             {% if message %}
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="alert alert-primary bg-red bold"> {{ message }} </div>
+                <br>
+            </div>
+            {% endif %}
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="text-left" >
+                    <h3>Identification</h3>
+                </div>
+             </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group text-center">
+                    <img
+                        class="img-thumbnail small-img-thumb"
+                        src="https://assets.webiconspng.com/uploads/2016/12/User-Icon-PNG.png"
+                    >
+                    <div class="text-center">
+                        <input type="file" name="profile_snap" class="form-control" style="width:220px;margin:auto;" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group text-center">
+                    <div class="" style="">
+                        <img class="img-thumbnail small-img-thumb" src="https://image.flaticon.com/icons/png/512/125/125503.png">
+                    </div>
+                    <div>
+                        <input type="hidden" name="fingerprint_number" >
+                        <h3> UnVerified </h3>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="text-left" >
+                    <h3>Personal Information</h3>
+                </div>
+             </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <label>CNIC</label>
+                    <input type="text" class="form-control" name="cnic" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <label>Tazkara</label>
+                    <input type="text" class="form-control" name="tazkara" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="form-group">
+                    <label>Tribe</label>
+                    <input type="text" class="form-control" name="tribe" placeholder="eg. Rajput">
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="form-group">
+                    <label>Father's Name</label>
+                    <input type="text" class="form-control" name="fathers_name" placeholder="eg. Rajput">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" name="first_name" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="form-group">
+                    <label>Middle Name</label>
+                    <input type="text" class="form-control" name="middle_name" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" name="last_name" placeholder="eg. Rajput">
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="form-group">
+                    <label>Mobile No.</label>
+                    <input type="text" class="form-control" name="mobile_number" placeholder="eg. Rajput">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <label>Profession</label>
+                    <input type="text" class="form-control" name="professional" placeholder="eg. Rajput">
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="text-left" >
+                    <h3>Vehicle Information</h3>
+                </div>
+             </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <label>Modal</label>
+                    <input type="text" class="form-control" name="vehicle_modal" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <label>Brand</label>
+                    <input type="text" class="form-control" name="vehicle_brand" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <label>Registeration Number</label>
+                    <input type="text" class="form-control" name="vehicle_registration_number" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <label>Engine Number</label>
+                    <input type="text" class="form-control" name="vehicle_engine_number" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <label>Chassis Number</label>
+                    <input type="text" class="form-control" name="vehicle_chassis_number" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="text-left" >
+                    <h3>Visit Details</h3>
+                </div>
+             </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <div>
+                        <label for="direction">Travelling Direction</label>
+                    </div>
+                    <div class="form-check" >
+                        <input class="form-check-input" type="radio" name="travelling_direction" value="in_bound" checked>
+                        <label class="form-check-label" >
+                            Inbound
+                        </label>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input class="form-check-input" type="radio" name="travelling_direction" value="out_bound">
+                        <label class="form-check-label" >
+                            Outbound
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                 <div class="form-group">
+                    <label for="fname">Leaving Schedule</label>
+                    <input type="datetime-local" class="form-control" name="leaving_schedule" id="leavingSchedule" />
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <div class="form-group">
+                    <label for="fname">Return Time</label>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="stayradio" id="selectReturnTimeDay" value="timeofreturn" checked>
+                        <label class="form-check-label" >
+                            Select Day
+                        </label>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input class="form-check-input" type="radio" name="stayradio" id="selectReturnTimeDuration" value="timeofreturn2" >
+                        <label class="form-check-label" >
+                            Select Duration
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="sectionReturnTimeDay" style="display:block;" >
+                    <input type="datetime-local" class="form-control" id="timeofreturn" name="time_of_return" >
+                </div>
+
+                <div class="form-group" id="sectionReturnTimeDuration" style="display:none;" >
+                    <input type="text" class="form-control" id="staymonths" name="stay_months" placeholder="Month(s)" /> &nbsp;
+                    <input type="text" class="form-control" id="staydays" name="stay_days" placeholder="Day(s)" /> &nbsp;
+                    <input type="text" class="form-control" id="stayhours" name="stay_hours" placeholder="Hour(s)" />
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <div class="form-group">
+                    <label>Purpose of Visit</label>
+                    <textarea type="text" rows="5" class="form-control" name="purpose_of_visit" placeholder="eg. 3521212345678"></textarea>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="text-left" >
+                    <h3>Family Relations</h3>
+                </div>
+             </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group">
+                    <label>Cnic</label>
+                    <input type="text" class="form-control" name="family_cnic[]" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group">
+                    <label>Tazkara</label>
+                    <input type="text" class="form-control" name="family_tazkara[]" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="family_name[]" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group">
+                    <label>Date Of Birth</label>
+                    <input type="date" class="form-control" name="family_dob[]" placeholder="eg. 3521212345678">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group">
+                    <label>Gender</label><br>
+                    <input type="radio" class="" id="family_gender" name="family_gender[]" value="male" placeholder="eg. 3521212345678"> Male
+                    &nbsp;
+                    <input type="radio" class="" id="family_gender" name="family_gender[]" value="female" placeholder="eg. 3521212345678"> Female
+                </div>
+            </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    <br>
+                    <div class="form-group"  style="display:flex;" >
+                        <br>
+                        <button id="family_add" class="btn theme" style="display:inline-block;"> <i class="fa fa-plus"></i> </button> &nbsp;
+                        <button id="family_remove" class="btn theme"  style="display:inline-block;"> <i class="fa fa-trash"></i> </button>
+                    </div>
+                </div>
+            </div>
+                </div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <br>
+                <div class="text-left" >
+                    <h3>Gauranteer/Referer Information</h3>
+                </div>
+             </div>
+
+             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="eg. 3521212345678" list="referers_list" id="referer_list_box"
+                           name="referer_list_box" >
+                    <datalist id="referers_list">
+                        {% for referer in data.referers_list %}
+                            <option value="{{ referer.firstname }} {{ referer.middlename }} {{ referer.lastname }}">
+                        {% endfor %}
+                    </datalist>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div style="float:right;" class="pull-right" >
+                    <button class="btn theme" >
+                        <i class="fas fa-folder"></i> &nbsp;
+                        Register
+                    </button>
+                </div>
+                <div class="clearfix"></div>
+                <br><br>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

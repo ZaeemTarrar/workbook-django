@@ -1,0 +1,140 @@
+{% extends "layouts/simple_bootstrap/top_nav_bar.html" %}
+
+{% block html_content_page_body %}
+
+    <form class="container" >
+         <div id="heading" class="text-center" style="padding:10px;" >
+            <h2>Visitor Attendance</h2>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div>
+                    <h3>Personal Information</h3>
+                    <hr>
+                </div>
+                <div class="form-group">
+                    <label for="cnic">CNIC</label>
+                    <input type="text" class="form-control" id="cnic" placeholder="eg. 3521212345678">
+                </div>
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" placeholder="eg. John">
+                </div>
+                <div class="form-group">
+                    <label for="fname">Middle Name</label>
+                    <input type="text" class="form-control" id="mname" placeholder="eg. David">
+                </div>
+                <div class="form-group">
+                    <label for="fname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" placeholder="eg. Miller">
+                </div>
+
+                <div>
+                    <h3>Referer Information</h3>
+                    <hr>
+                </div>
+                <div id="referer">
+                    <div class="form-group" >
+                        <label for="fname">Referer CNIC</label>
+                        <div style="display: flex" >
+                            <input type="search" class="form-control" id="referersearch" placeholder="eg. 3521212345678" />
+                            &nbsp;
+                            <button id="refererDetailLink" class="btn btn-sm btn-primary" title="Referer Details" >
+                                <i class="fas fa-file"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                    <div>
+                    <h3>Travelling Information</h3>
+                    <hr>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <label for="direction">Travelling Direction</label>
+                    </div>
+                    <div class="form-check" >
+                        <input class="form-check-input" type="radio" name="directionradio" id="inboundradio" value="inbound" checked>
+                        <label class="form-check-label" for="inboundradio">
+                            Inbound
+                        </label>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input class="form-check-input" type="radio" name="directionradio" id="outboundradio" value="outbound">
+                        <label class="form-check-label" for="outboundradio">
+                            Outbound
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fname">Leaving Schedule</label>
+                    <input type="datetime-local" class="form-control" id="leavingSchedule" />
+                </div>
+                <div class="form-group">
+                    <label for="fname">Return Time</label>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="stayradio" id="selectReturnTimeDay" value="timeofreturn" checked>
+                        <label class="form-check-label" for="timeofreturnradio">
+                            Select Day
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="stayradio" id="selectReturnTimeDuration" value="timeofreturn" >
+                        <label class="form-check-label" for="timeofreturnradio">
+                            Select Duration
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="sectionReturnTimeDay" style="display:block;" >
+                    <input type="datetime-local" class="form-control" id="timeofreturn">
+                </div>
+
+                <div class="form-group" id="sectionReturnTimeDuration" style="display:none;" >
+                    <input type="text" class="form-control" id="staymonths" placeholder="Month(s)" /> &nbsp;
+                    <input type="text" class="form-control" id="staydays" placeholder="Day(s)" /> &nbsp;
+                    <input type="text" class="form-control" id="stayhours" placeholder="Hour(s)" />
+                </div>
+                <div class="form-group">
+                    <label for="cnic">Comments</label>
+                    <textarea class="form-control" id="comments" rows="3"></textarea>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="text-center">
+                    <img
+                        class="img-thumbnail small-img-thumb"
+                        src="https://assets.webiconspng.com/uploads/2016/12/User-Icon-PNG.png"
+                    >
+                    <div class="form-group">
+                        <input type="file" class="form-control" />
+                    </div>
+                    <div class="" style="">
+                        <img class="img-thumbnail small-img-thumb" src="https://image.flaticon.com/icons/png/512/125/125503.png">
+                    </div>
+                    <div>
+                        <h3> UnVerified </h3>
+                    </div>
+                </div>
+                <br><br>
+                <div style="float:right;" >
+                    <button class="btn theme" >
+                        <i class="fas fa-user"></i> &nbsp;
+                        Register
+                    </button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

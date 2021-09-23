@@ -1,0 +1,140 @@
+{% extends "layouts/simple_bootstrap/top_nav_bar.html" %}
+
+{% block html_content_page_body %}
+
+    <div class="container" >
+        <div id="heading" class="text-center" style="padding:10px;" >
+            <h2>Reports & Analysis</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                         <div style="display:flex;" >
+                            <div style="margin-right:10px;" >
+                                <label for=""> <b> From </b> </label>
+                                <input type="date" class="form-control" placeholder="Date Filter" style="width:200px;" />
+                            </div>
+                            <div>
+                                <label for=""> <b> To </b> </label>
+                                <input type="date" class="form-control" placeholder="Date Filter" style="width:200px;" />
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="card text-white bg-primary theme" style="width:100%;max-width:100%;">
+                                  <div class="card-header theme text-center">
+                                      <div>
+                                          <i class="fas fa-arrow-down" style="font-size:30px;padding:5px;" ></i> &nbsp;
+                                      </div>
+                                      <div>
+                                          <h1 style="font-size:40px;" > 3098 </h1>
+                                      </div>
+                                      <div>
+                                          <span> InBounds </span>
+                                      </div>
+                                  </div>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
+                                <div class="card text-white bg-primary theme" style="width:100%;max-width:100%;">
+                                  <div class="card-header theme text-center">
+                                      <div>
+                                          <i class="fas fa-arrow-up" style="font-size:30px;padding:5px;" ></i> &nbsp;
+                                      </div>
+                                      <div>
+                                          <h1 style="font-size:40px;" > 3095 </h1>
+                                      </div>
+                                      <div>
+                                          <span> OutBounds </span>
+                                      </div>
+                                  </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div>
+                          <canvas id="myChart" style="height:300px;width:100%;" ></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div>
+                    <div class="card" style="height:70vh;" >
+                      <div class="card-header theme"> <i class="fas fa-globe" ></i> &nbsp; Over Stayed </div>
+                      <div class="card-body">
+                        <table class="table table-hover" style="font-size:10px;" >
+                            <thead>
+                                <th>InBounds</th>
+                                <th>OutBounds</th>
+                                <th>Overstay</th>
+                                <th>Reached Back</th>
+                            </thead>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Sept', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'],
+                datasets: [
+                    {
+                        label: 'InBounds',
+                        data: [19, 3, 5, 2, 3,12],
+                        backgroundColor: [
+                            '#622569',
+                        ],
+                        borderColor: [
+                            '#622569',
+                        ],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'OutBounds',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            '#eeeeee',
+                        ],
+                        borderColor: [
+                            '#622569',
+                        ],
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                plugins: {
+                  legend: {
+                    position: 'top',
+                  },
+                  title: {
+                    display: true,
+                    text: 'Traveller Analysis'
+                  }
+                }
+            }
+        });
+    </script>
+
+{% endblock %}
